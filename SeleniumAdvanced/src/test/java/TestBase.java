@@ -19,6 +19,7 @@ public class TestBase {
         // options.addArguments("--headless");
 
         driver = new ChromeDriver(options);
+        driver.get("http://146.59.32.4/index.php");
     }
 
     @AfterMethod
