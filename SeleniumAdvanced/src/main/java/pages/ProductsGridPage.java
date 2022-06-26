@@ -11,11 +11,13 @@ public class ProductsGridPage extends BasePage{
         super(driver);
     }
     @FindBy(css = ".product-title")
-    List<WebElement> productName;
+    private List<WebElement> productName;
+
+
     public void openProductWithName(String name){
         for (WebElement productName : productName){
-            if(productName.equals(name)){
-                productName.click();
+            if(productName.getText().equals(name)){
+                click(productName);
                 return;
             }
         }
